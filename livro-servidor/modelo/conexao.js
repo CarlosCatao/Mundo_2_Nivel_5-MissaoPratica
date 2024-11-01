@@ -3,7 +3,7 @@ const banco = require('mongoose');
 const options = {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    connectTimeoutMS: 30000,  // Tempo limite aumentado
+    connectTimeoutMS: 30000,
     retryWrites: true
 };
 

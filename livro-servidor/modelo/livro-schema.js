@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.set('strictQuery', true); // evita consultas inconsistentes
+mongoose.set('strictQuery', true);
 
 const livroSchema = new mongoose.Schema({
     codigo: { type: Number, required: true, unique: true },

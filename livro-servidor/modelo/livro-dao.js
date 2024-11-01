@@ -3,7 +3,6 @@ const Livro = require('./livro-schema');
 const obterLivros = async () => {
     try {
         const livros = await Livro.find();
-        console.log(livros);
         return livros;
       } catch (error) {
         console.error('Erro ao obter livros:', error);
@@ -13,9 +12,7 @@ const obterLivros = async () => {
 
 const incluir = async (livro) => {
     try {
-        console.log("Incluir - livro recebido: ", livro);
         const novoLivro = await Livro.create(livro);
-        console.log("Incluir: ", novoLivro);
         return novoLivro;
       } catch (error) {
         if (error.code === 11000) {
