@@ -49,7 +49,6 @@ export class ControleLivro {
     try {
       const livroMongo: LivroMongo = {
         _id: null,
-        //codigo: typeof livro.codigo === 'string' ? parseInt(livro.codigo, 10) : livro.codigo,
         codigo: String(livro.codigo),
         codEditora: livro.codEditora,
         titulo: livro.titulo,
@@ -76,7 +75,6 @@ export class ControleLivro {
   async excluir(codigo: string): Promise<boolean> {
     try {
 
-      //const codigoString = String(codigo);
       const id = await this.obterIdPorCodigo(codigo);
 
       const resposta = await fetch(`${baseURL}/${id}`, {
@@ -100,10 +98,10 @@ export class ControleLivro {
         throw new Error('Erro ao buscar o livro');
       }  
 
-      // Find the book with the matching codigo
+      // Localiza o Livro correspondente ao codigo informado
       const livro = livrosId.find((livro) => livro.codigo === codigo);
 
-      // Return the _id.$oid if livro is found, otherwise return null
+      // Retorna o _id se encontrado, caso contrário retorna null
       return livro ? livro._id : null;
 
     } catch (error) {

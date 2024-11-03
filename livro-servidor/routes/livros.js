@@ -34,7 +34,7 @@ router.post('/',
     async (req, res) => {
     try {
         const dadosLivro = req.body; // Obtendo os dados do livro do corpo da requisição
-        console.log("Livro a Adicionar: ", dadosLivro);
+
         const novoLivro = await livroDao.incluir(dadosLivro);
 
         res.status(201).json({ mensagem: 'Livro incluído com sucesso', novoLivro });  // Retorna o livro criado
