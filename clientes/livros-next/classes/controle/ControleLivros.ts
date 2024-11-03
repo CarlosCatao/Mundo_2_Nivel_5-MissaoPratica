@@ -20,7 +20,7 @@ interface LivroMongo {
   autores: string[];
 }
 
-export class ControleLivro {
+export default class ControleLivros {
 
   // Método para obter livros do servidor
   async obterLivros(): Promise<Array<Livro>> {
@@ -49,7 +49,6 @@ export class ControleLivro {
     try {
       const livroMongo: LivroMongo = {
         _id: null,
-        //codigo: typeof livro.codigo === 'string' ? parseInt(livro.codigo, 10) : livro.codigo,
         codigo: String(livro.codigo),
         codEditora: livro.codEditora,
         titulo: livro.titulo,
@@ -112,5 +111,3 @@ export class ControleLivro {
     }  
   }
 }
-
-export const controleLivro = new ControleLivro();

@@ -1,0 +1,34 @@
+.menu {
+    width: 100%;
+    background-color: black;
+    padding: 1%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color:  white;
+    font-weight: bold;
+  }
+  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+  
