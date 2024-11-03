@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
 const livroSchema = new mongoose.Schema({
-    codigo: { type: Number, required: true, unique: true },
+    codigo: { type: String, required: true, unique: true },
     codEditora: { type: Number, required: true },
     titulo: { type: String, required: true },
     resumo: { type: String, required: true },
